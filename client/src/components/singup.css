@@ -1,0 +1,7 @@
+.singup{
+    z-index:1;
+    padding-top:3rem;
+    background-color: rgb(28, 30, 26);
+    display: flex;
+    height: 100vh;
+}

@@ -1,0 +1,179 @@
+[
+    {
+      "id": 1,
+      "first_name": "Constantine",
+      "last_name": "Schoular",
+      "email": "cschoular0@apache.org",
+      "gender": "Male",
+      "jobtitle": "Accountant III"
+    },
+    {
+      "id": 2,
+      "first_name": "Cordy",
+      "last_name": "Fyfe",
+      "email": "cfyfe1@earthlink.net",
+      "gender": "Male",
+      "jobtitle": "Sales Representative"
+    },
+    {
+      "id": 3,
+      "first_name": "Niki",
+      "last_name": "Lamprecht",
+      "email": "nlamprecht2@statcounter.com",
+      "gender": "Female",
+      "jobtitle": "Community Outreach Specialist"
+    },
+    {
+      "id": 4,
+      "first_name": "Mabelle",
+      "last_name": "Rraundl",
+      "email": "mrraundl3@cafepress.com",
+      "gender": "Female",
+      "jobtitle": "Research Associate"
+    },
+    {
+      "id": 5,
+      "first_name": "Madonna",
+      "last_name": "Crowdson",
+      "email": "mcrowdson4@opensource.org",
+      "gender": "Female",
+      "jobtitle": "Mechanical Systems Engineer"
+    },
+    {
+      "id": 6,
+      "first_name": "Shea",
+      "last_name": "Bozward",
+      "email": "sbozward5@tiny.cc",
+      "gender": "Female",
+      "jobtitle": "Clinical Specialist"
+    },
+    {
+      "id": 7,
+      "first_name": "Dmitri",
+      "last_name": "Brattan",
+      "email": "dbrattan6@nymag.com",
+      "gender": "Male",
+      "jobtitle": "Mechanical Systems Engineer"
+    },
+    {
+      "id": 8,
+      "first_name": "Tabby",
+      "last_name": "Seak",
+      "email": "tseak7@symantec.com",
+      "gender": "Male",
+      "jobtitle": "Software Engineer III"
+    },
+    {
+      "id": 9,
+      "first_name": "Vincenz",
+      "last_name": "Marsh",
+      "email": "vmarsh8@pcworld.com",
+      "gender": "Agender",
+      "jobtitle": "Desktop Support Technician"
+    },
+    {
+      "id": 10,
+      "first_name": "Ryon",
+      "last_name": "O'Hegertie",
+      "email": "rohegertie9@slashdot.org",
+      "gender": "Male",
+      "jobtitle": "Senior Financial Analyst"
+    },
+    {
+      "id": 11,
+      "first_name": "Colin",
+      "last_name": "Peiro",
+      "email": "cpeiroa@barnesandnoble.com",
+      "gender": "Male",
+      "jobtitle": "Structural Engineer"
+    },
+    {
+      "id": 12,
+      "first_name": "Marmaduke",
+      "last_name": "Jedrych",
+      "email": "mjedrychb@behance.net",
+      "gender": "Male",
+      "jobtitle": "Staff Accountant I"
+    },
+    {
+      "id": 13,
+      "first_name": "Ruttger",
+      "last_name": "Leak",
+      "email": "rleakc@sphinn.com",
+      "gender": "Male",
+      "jobtitle": "Marketing Manager"
+    },
+    {
+      "id": 14,
+      "first_name": "Travis",
+      "last_name": "Auden",
+      "email": "taudend@barnesandnoble.com",
+      "gender": "Male",
+      "jobtitle": "Systems Administrator III"
+    },
+    {
+      "id": 15,
+      "first_name": "Alic",
+      "last_name": "Lyttle",
+      "email": "alyttlee@ifeng.com",
+      "gender": "Male",
+      "jobtitle": "Junior Executive"
+    },
+    {
+      "id": 16,
+      "first_name": "Darsie",
+      "last_name": "Bellingham",
+      "email": "dbellinghamf@privacy.gov.au",
+      "gender": "Female",
+      "jobtitle": "Product Engineer"
+    },
+    {
+      "id": 17,
+      "first_name": "Billi",
+      "last_name": "Chiles",
+      "email": "bchilesg@va.gov",
+      "gender": "Female",
+      "jobtitle": "Project Manager"
+    },
+    {
+      "id": 18,
+      "first_name": "Marjorie",
+      "last_name": "Borgesio",
+      "email": "mborgesioh@dyndns.org",
+      "gender": "Female",
+      "jobtitle": "Senior Financial Analyst"
+    },
+    {
+      "id": 19,
+      "first_name": "Johnath",
+      "last_name": "Tidmarsh",
+      "email": "jtidmarshi@unicef.org",
+      "gender": "Female",
+      "jobtitle": "Web Designer I"
+    },
+    {
+      "id": 20,
+      "first_name": "Wain",
+      "last_name": "Dickie",
+      "email": "wdickiej@diigo.com",
+      "gender": "Male",
+      "jobtitle": "Computer Systems Analyst I"
+    },
+    {
+      "first_name": "Vincenz",
+      "last_name": "Marsh",
+      "email": "vmarsh8@pcworld.com",
+      "gender": "Agender",
+      "jobtitle": "Desktop Support Technician",
+      "id": 21
+    },
+    {
+      "first_name": "Vincenz",
+      "last_name": "Marsh",
+      "email": "vmarsh8@pcworld.com",
+      "gender": "Agender",
+      "jobtitle": "Desktop Support Technician",
+      "id": 22
+    }
+  ]
+  
