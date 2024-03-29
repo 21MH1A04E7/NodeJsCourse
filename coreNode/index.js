@@ -1,2 +1,2 @@
-import Sum from './sum.js'
-Sum()
+// import Sum from './sum.js'
+// Sum()

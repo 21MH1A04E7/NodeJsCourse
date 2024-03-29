@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+    <title>home page</title>
+</head>
+<body>
+    <h1>URL shortener</h1>
+    <% if(locals.id){%>
+        <p>URL Generate: http://localhost:8001/url/<%= id %></p>
+    <%}%>
+    <div>
+        <form method="POST" action="/url" >
+            <label for="redirectRUL">Enter your original url</label>
+            <input type="text" id="url" name="url" placeholder="enter original url"/>
+            <br/>
+            <button type="submit" id="submit">Generate</button>
+        </form>
+    </div>
+    <div>
+        <% if (locals.urls) { %>
+            <table>
+                <thead>
+                    <th>S.NO</th>
+                    <th>ShorId</th>
+                    <th>Redirect</th>
+                    <th>Clicks</th>
+                </thead>
+                <tbody>
+                    <% urls.forEach((url, index) => { %>
+                        <tr> <!-- Add a <tr> element for each row -->
+                            <td><%= index + 1 %></td>
+                            <td><%= url.shortId %></td> <!-- Change 'urls' to 'url' -->
+                            <td><%= url.redirectUrl %></td> <!-- Change 'urls' to 'url' -->
+                            <td><%= url.visitHistory.length %></td> <!-- Change 'urls' to 'url' -->
+                        </tr>
+                    <% }) %>
+                </tbody>
+            </table>
+        <% } %>
+    </div>
+</body>
+</html>
