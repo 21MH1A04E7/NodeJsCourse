@@ -1,0 +1,11 @@
+Authentication 
+type of Authentication 
+1. Password-based Authentication: 
+2. Multi-factor Authentication 
+3. Biometric Authentication
+4. Token-based Authentication:
+5. Certificate-based Authentication
+6. OAuth( open Authorization ) 
+
+//state full or stateless Authentication
+

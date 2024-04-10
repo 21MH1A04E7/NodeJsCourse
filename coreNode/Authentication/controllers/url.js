@@ -5,10 +5,12 @@ async function handelGenerateNewShortURL(req,res){
         const givenUrl=req.body.url;
         if(!givenUrl) return res.status(400).json({error:"url is required"})
         const shortID=shortid();
+        console.log(req.user.id)
         await Url.create({
             shortId:shortID,
             redirectUrl:givenUrl,
-            visitHistory:[]
+            visitHistory:[],
+            createBy:req.user.id,
         })
         return res.render("index",{id:shortID})
         res.status(200).json({id:shortID})
