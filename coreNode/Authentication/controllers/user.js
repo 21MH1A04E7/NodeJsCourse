@@ -4,11 +4,18 @@ const jwt=require('jsonwebtoken')
 async function handleuserSingup(req,res){
     try{
         const {name,email,password}=req.body;
-        await User.create({
+        const user=await User.create({
             name,
             email,
             password
         })
+        const payload={
+            id:user._id,
+            email:user.email,
+            role:user.role
+        }
+        const token=jwt.sign(payload,'hariom')
+        res.cookie('access_cookie',token)
         return res.redirect("/")
     }catch(err){
         res.status(500).json({message:'Interval server error'})
@@ -27,6 +34,7 @@ async function handleuserLogin(req,res){
         const payload={
             id:user._id,
             email:user.email,
+            role:user.role
         }
         const token=jwt.sign(payload,'hariom')
         res.cookie('access_cookie',token)

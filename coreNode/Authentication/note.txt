@@ -9,3 +9,4 @@ type of Authentication
 
 //state full or stateless Authentication
 
+//sending token by header (autherization "Bearer <token>")

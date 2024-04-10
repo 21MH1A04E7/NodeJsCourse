@@ -1,9 +1,14 @@
 const express=require('express')
 const Url=require('../models/url')
-const {verifyToken}=require('../service/verifyToken')
+const {verifyToken,restrictTo}=require('../service/verifyToken')
 const router=express.Router();
 
-router.get('/',verifyToken,async (req,res)=>{
+router.get('/admin',verifyToken,restrictTo(["admin"]),async function (req,res){
+    const allurls=await Url.find()
+    return res.render('index',{urls:allurls})
+})
+
+router.get('/',verifyToken,restrictTo(["user","admin"]),async (req,res)=>{
     // console.log(req.user.id)
     const allurls=await Url.find({createBy:req.user.id})
     return res.render('index',{urls:allurls})

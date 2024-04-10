@@ -13,7 +13,18 @@ function verifyToken(req,res,next){
     })
 }
 
+function restrictTo(roles=[]){
+    return function (req,res,next){
+        if(!req.user) return res.redirect('/login')
+        // console.log(req.user)
+        if(!roles.includes(req.user.role)){
+            return res.end("unAuthorized")
+        }
+        return next()
+    }
+}
 
 module.exports={
     verifyToken,
+    restrictTo,
 }
