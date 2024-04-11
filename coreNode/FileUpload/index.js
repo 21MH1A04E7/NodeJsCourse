@@ -4,7 +4,19 @@ const multer = require("multer");
 
 const app = express();
 
-const upload = multer({ dest: "uploads/" });
+// const upload = multer({ dest: "uploads/" });
+//creating storage
+const storage=multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, './uploads')
+  },
+  filename: function (req, file, cb) {
+    cb(null,`${Date.now()}-${file.originalname}`)
+  }
+})
+
+const upload = multer({ storage})
+
 
 app.set("view engine", "ejs");
 app.set("views", path.resolve("./FileUploadView"));
@@ -17,8 +29,8 @@ app.get("/", (req, res) => {
 });
 
 app.post("/upload", upload.single("image"), (req, res) => {
-    console.log(req.body);
-    console.log(req.file);
+    // console.log(req.body);
+    // console.log(req.file);
     return res.redirect('/')
 });
 
