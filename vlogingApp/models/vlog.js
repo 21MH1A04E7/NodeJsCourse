@@ -10,8 +10,7 @@ const blogSchema=new mongoose.Schema({
         required:true
     },
     coverImageUrl:{
-        type:String,
-        required:true
+        type:String
     },
     createdBy:{
         type:mongoose.Schema.Types.ObjectId,

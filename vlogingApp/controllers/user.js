@@ -6,7 +6,7 @@ const bcryptjs=require('bcryptjs')
 async function handleSignup(req,res){
     try{
         const {fullName,email,password}=req.body
-        await User.create({fullName:fullName,email:email,password:password});
+        const response=await User.create({fullName:fullName,email:email,password:password});
         return res.redirect("/")
     }catch(err){
         console.log(err)
