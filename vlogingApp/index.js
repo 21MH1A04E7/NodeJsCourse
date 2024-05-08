@@ -28,6 +28,7 @@ app.use(cookieParser());
 //serving the static route
 app.use(express.static(path.resolve('./public')))
 
+
 app.set('view engine', 'ejs')
 app.set('views',path.resolve('./views'))
 

@@ -3,6 +3,7 @@ const verifytoken=require('../services/authentication')
 const multer=require('multer')
 const path=require('path')
 const Blog=require('../models/vlog')
+const User=require('../models/user')
 const router=express.Router();
 
 const storage = multer.diskStorage({
@@ -33,4 +34,12 @@ router.post('/',verifytoken,upload.single("coverImageUrl"),async (req,res)=>{
     return res.redirect(`/blog/${blog._id}`)
 })
 
+router.get('/:id',verifytoken,async (req,res)=>{
+    const id=req.params.id;
+    const blog=await Blog.findById(id)
+    const user=await User.findById(blog.createdBy)
+    const {password:pass,...rest}=user._doc
+    console.log(rest)
+    return res.render('blog',{blog,user:req.user,createdUser:user})
+})
 module.exports = router

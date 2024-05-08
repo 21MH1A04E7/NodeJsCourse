@@ -6,16 +6,20 @@
   </head>
   <body>
     <%-  include('./partials/nav') %>
-    <div class="container mt-3">
-      <% blog.forEach(blog => { %>
-        <div class="card mb-3 shadow" style="max-width: 18rem;">
-          <img src="<%= blog.coverImageUrl %>" class="card-img-top" alt="blog image">
-          <div class="card-body">
-            <h5 class="card-title"><%= blog.title %></h5>
-            <a href="/blog/<%= blog._id %>" class="btn btn-primary">View</a>
+    <div class="mt-3 mx-2">
+      <div class="row row-cols-4 ">
+        <% blog.forEach(blog => { %>
+         <div class="col">
+          <div class="card mb-3 shadow" style="max-width: 18rem;">
+            <img src="<%= blog.coverImageUrl %>" class="card-img-top" height="150px" alt="blog image">
+            <div class="card-body">
+              <h5 class="card-title"><%= blog.title %></h5>
+              <a href="/blog/<%= blog._id %>" class="btn btn-primary">View</a>
+            </div>
           </div>
-        </div>
-      <% }) %>
+         </div>
+        <% }) %>
+      </div>
     </div>
     <%- include('./partials/script') %>
   </body>
