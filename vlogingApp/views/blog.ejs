@@ -23,11 +23,36 @@
         </div>
       </div>
     </div>
-    <div class="container mt-3 shadow-lg">
+    <div class="container mt-3 shadow-sm">
       <h2>This blog had been created by</h2>
       <img src="<%= createdUser.avatar %>" alt="Blog Cover Image" width="70px" class="img-fluid rounded-circle">
       <span><%= createdUser.fullName %></span>
     </div>
+    <div class="container my-2 shadow-sm p-4">
+      <h2>Comment <%= comments.length %></h2>
+      <% if (locals.user) { %>
+        <form action="/blog/comment/<%= blog._id %>" method="post">
+          <input type="text" required id="content" name="content" class="form-control mb-3" placeholder="Enter your comment">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      <% } %>
+    </div>
+    <div class="container mt-2">
+      <% comments.forEach(comment => { %>
+        <div class="card mb-3 shadow-sm">
+          <div class="card-body">
+            <div class="d-flex align-items-center">
+              <img src="<%= comment.createdBy.avatar %>" alt="User Avatar" width="60px" class="img-fluid rounded-circle mr-2">
+              <h5 class="card-title mb-0"><%= comment.createdBy.fullName %></h5>
+            </div>
+            <p class="card-text"><%= comment.content %></p>
+          </div>
+        </div>
+      <% }) %>
+    </div>
+    
+    
+    
     <%- include('./partials/script') %>
   </body>
 </html>

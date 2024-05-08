@@ -4,6 +4,7 @@ const multer=require('multer')
 const path=require('path')
 const Blog=require('../models/vlog')
 const User=require('../models/user')
+const Comment=require('../models/comment')
 const router=express.Router();
 
 const storage = multer.diskStorage({
@@ -36,10 +37,24 @@ router.post('/',verifytoken,upload.single("coverImageUrl"),async (req,res)=>{
 
 router.get('/:id',verifytoken,async (req,res)=>{
     const id=req.params.id;
+    const comments=await Comment.find({blogId:id}).populate('createdBy')
+    // console.log(comments)
     const blog=await Blog.findById(id)
     const user=await User.findById(blog.createdBy)
     const {password:pass,...rest}=user._doc
-    console.log(rest)
-    return res.render('blog',{blog,user:req.user,createdUser:user})
+    // console.log(rest)
+    return res.render('blog',{blog,user:req.user,createdUser:user,comments})
 })
+
+router.post('/comment/:blogId',verifytoken,async (req,res)=>{
+  const {content}=req.body;
+  // console.log(content)
+  const comment=await Comment.create({
+    content,
+    createdBy:req.user._id,
+    blogId:req.params.blogId
+  })
+  return res.redirect(`/blog/${req.params.blogId}`)
+})
+
 module.exports = router
