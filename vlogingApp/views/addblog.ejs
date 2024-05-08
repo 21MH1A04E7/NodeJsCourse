@@ -6,7 +6,24 @@
   </head>
   <body>
     <%-  include('./partials/nav') %>
-    <h1><%= JSON.stringify(locals.user) %></h1>
+    <div class="container shadow-lg p-3 mb-5 bg-white rounded">
+      <h1 class="my-3 text-primary">Add Blog</h1>
+      <form action="/blog" method="post" enctype="multipart/form-data">
+        <div class="mb-3">
+          <label for="title" class="form-label">Title</label>
+          <input type="text" class="form-control" id="title" name="title" placeholder="Enter the title for the blog">
+        </div>
+        <div class="mb-3">
+          <label for="description" class="form-label">Write a Description</label>
+          <textarea class="form-control" id="description" name="description" rows="3"></textarea>
+        </div>
+        <div class="mb-3">
+          <label for="coverImageUrl" class="form-label">Upload Image for Blog</label>
+          <input class="form-control" type="file" id="coverImageUrl" name="coverImageUrl">
+        </div>
+        <button type="submit" class="btn btn-success">Submit</button>
+      </form>
+    </div>    
     <%- include('./partials/script') %>
   </body>
 </html>
