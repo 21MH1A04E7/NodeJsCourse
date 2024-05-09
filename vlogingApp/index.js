@@ -45,7 +45,7 @@ app.use('/user',staticRouter)
 app.use('/user',userRouter)
 app.use('/blog',blogRouter)
 
-const port=process.env.PORT ||8888
+const port=process.env.PORT
 app.listen(port,()=>{
     console.log('server is started on port 8888')
 })
