@@ -32,10 +32,16 @@ io.on('connection',(socket)=>{
     
     //event
     socket.on("message",(data)=>{
-        console.log(data)
+        // console.log(data)
         // io.emit("message",`${data} -${socket.id}`)
         //it will send this message every user except
-        socket.broadcast.emit("get-message",`${data} -${socket.id}`)
+        // socket.broadcast.emit("get-message",data)
+        io.to(data.roomId).emit("get-message",data)
+    })
+    socket.on("join-room",(roomName)=>{
+        // console.log(roomName)
+        socket.join(roomName)
+        
     })
     //disconnect the code
     socket.on("disconnect",()=>{
