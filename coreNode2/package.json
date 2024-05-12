@@ -1,0 +1,17 @@
+{
+  "name": "corenode2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "a.js",
+  "scripts": {
+    "start": "node clusterNode/server.js",
+    "dev": "nodemon clusterNode/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "express-status-monitor": "^1.3.4"
+  }
+}
