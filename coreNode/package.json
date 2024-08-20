@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon FileUpload\\index.js",
+    "dev": "nodemon Authentication\\index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "hariom kumar",
