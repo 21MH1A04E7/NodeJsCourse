@@ -1,0 +1,5 @@
+A hospital is a healthcare institution that provides
+medical, surgical, and nursing care to individuals 
+who are sick or injured. Hospitals are equipped to diagnose, 
+treat, and manage a wide range of health conditions, from 
+minor ailments to serious diseases.
